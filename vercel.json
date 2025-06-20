@@ -1,7 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/mcp/route.js", "use": "@vercel/node" }],
+  "builds": [
+    { "src": "api/proxy.js", "use": "@vercel/node" }
+  ],
   "routes": [
-    { "src": "/api/proxy/mcp/(.*)", "dest": "/api/mcp/route" }
+    { "src": "/(.*)", "dest": "/api/proxy.js" }
   ]
 }
