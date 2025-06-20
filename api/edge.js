@@ -1,6 +1,7 @@
 // Edge Function for Hedy MCP Proxy
 export const config = {
   runtime: 'edge',
+  regions: ['iad1']  // Deploy to Washington, D.C. region
 };
 
 export default async function handler(request) {

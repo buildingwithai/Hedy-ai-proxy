@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/edge.js", "use": "@vercel/edge" }
-  ],
+  "functions": {
+    "api/edge.js": {
+      "runtime": "edge"
+    }
+  },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/edge.js" }
+    {
+      "src": "/(.*)",
+      "dest": "/api/edge.js"
+    }
   ]
 }
