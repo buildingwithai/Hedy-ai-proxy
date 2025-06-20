@@ -1,14 +1,15 @@
 {
   "name": "hedy-ai-proxy",
   "version": "1.0.0",
-  "main": "api/proxy.js",
+  "main": "api/edge.js",
   "scripts": {
-    "start": "node api/proxy.js"
+    "start": "vercel dev"
   },
   "dependencies": {
-    "http-proxy-middleware": "^2.0.6"
+    "@vercel/edge": "^1.1.0"
   },
   "engines": {
-    "node": ">=14.0.0"
-  }
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@8.10.0"
 }
